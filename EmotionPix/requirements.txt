@@ -1,10 +1,10 @@
 Flask
-Flask-Session
-python-dotenv
 requests
 opencv-python-headless
 numpy
-email-validator
-Werkzeug
-supabase
 fer
+email-validator
+python-dotenv
+Werkzeug
+flask-session
+supabase
