@@ -8,7 +8,13 @@ ENV PYTHONUNBUFFERED=1
 # Set working directory
 WORKDIR /app
 
-# Install dependencies
+# Install system dependencies required by OpenCV and others
+RUN apt-get update && apt-get install -y \
+    libgl1 \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -20,4 +26,3 @@ EXPOSE 5000
 
 # Run the app
 CMD ["python", "app.py"]
-
