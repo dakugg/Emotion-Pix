@@ -1,0 +1,10 @@
+Flask
+Flask-Session
+python-dotenv
+requests
+opencv-python-headless
+numpy
+email-validator
+Werkzeug
+supabase
+fer
